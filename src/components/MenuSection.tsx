@@ -208,7 +208,7 @@ export default function MenuSection({ onAddToBag }: MenuSectionProps) {
                 {/* Lower buy section */}
                 <div className="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/30">
                   <span className="font-serif font-black text-primary text-base">
-                    £{item.price.toFixed(2)}
+                    AED {item.price.toFixed(2)}
                   </span>
                   
                   <button
@@ -316,7 +316,7 @@ export default function MenuSection({ onAddToBag }: MenuSectionProps) {
                   </div>
 
                   <span className="font-serif font-extrabold text-lg text-primary">
-                    £{(selectedItem.price * quantity).toFixed(2)}
+                    AED {(selectedItem.price * quantity).toFixed(2)}
                   </span>
                 </div>
 

@@ -166,7 +166,7 @@ export default function App() {
               <span>Crumb &amp; Co.</span>
             </div>
             <p className="font-sans text-xs text-on-surface-variant/70">
-              © {new Date().getFullYear()} Crumb &amp; Co. Harrogate. Hand-baked in Yorkshire.
+              © {new Date().getFullYear()} Crumb &amp; Co. Dubai. Hand-baked with love.
             </p>
           </div>
 
@@ -190,7 +190,7 @@ export default function App() {
               <Facebook className="w-4 h-4" />
             </a>
             <a 
-              href="mailto:ellie-and-rosie@crumb-co-harrogate.co.uk"
+              href="mailto:hello@crumbandco.me"
               className="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center border border-outline-variant/40 hover:scale-110 transition-transform text-primary"
             >
               <Mail className="w-4 h-4" />

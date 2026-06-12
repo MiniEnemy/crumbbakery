@@ -15,13 +15,13 @@ export default function AboutTimeline() {
     {
       year: '2019',
       title: 'Moving to Montpelier Parade',
-      desc: 'With support from Harrogate communities, we officially rented out the little traditional green storefront. We bought our pride and joy: a professional stone-deck bread oven from Sweden.',
+      desc: 'With support from Dubai communities, we officially rented out the little traditional green storefront. We bought our pride and joy: a professional stone-deck bread oven from Sweden.',
       badge: 'retail storefront'
     },
     {
       year: '2021',
       title: 'Award-Winning Morning Pastry',
-      desc: 'Our Cinnamon Chelsea Bun was crowned Yorkshire\'s Favourite Pastry by the local culinary guild, causing queues to wind around the street corner every Saturday morning.',
+      desc: 'Our Cinnamon Chelsea Bun was crowned Dubai\'s Favourite Pastry by the local culinary guild, causing queues to wind around the street corner every Saturday morning.',
       badge: 'gourmet award'
     },
     {
@@ -48,7 +48,7 @@ export default function AboutTimeline() {
           </h2>
 
           <p className="font-sans text-[#51443f] text-sm md:text-base leading-relaxed">
-            Crumb &amp; Co. was founded in Harrogate on a simple principle: doing things slowly and properly. No pre-mixes, no synthetic additives, and no corner-cutting. We feed our sourdough starters daily and work closely with local farms to source berries, honey, and dairies.
+            Crumb &amp; Co. was founded in Dubai on a simple principle: doing things slowly and properly. No pre-mixes, no synthetic additives, and no corner-cutting. We feed our sourdough starters daily and work closely with local farms to source berries, honey, and dairies.
           </p>
 
           {/* Photo container styled nicely matching prompt specifications */}

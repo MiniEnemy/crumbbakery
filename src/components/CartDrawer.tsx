@@ -87,7 +87,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQty, on
                     </div>
                     <h3 className="font-serif font-extrabold text-2xl text-primary">Bake Order Stamped!</h3>
                     <p className="font-sans text-xs text-on-surface-variant max-w-xs mx-auto leading-relaxed">
-                      We have received your treat request! Ellie is wrapping up your pastries now. Please come over to <strong>12 Montpelier Parade, Harrogate</strong> for pickup!
+                      We have received your treat request! Ellie is wrapping up your pastries now. Please come over to <strong>12 Montpelier Parade, Dubai</strong> for pickup!
                     </p>
                     <div className="bg-[#fff1ea] p-4 rounded-xl border border-outline-variant text-[11px] text-left text-on-surface-variant max-w-xs mx-auto space-y-1">
                       <p className="font-bold text-primary">🔔 Order Status: Preparing</p>
@@ -148,7 +148,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQty, on
                               </button>
                             </div>
                             <span className="font-bold text-xs text-primary">
-                              £{(cartItem.item.price * cartItem.quantity).toFixed(2)}
+                              AED {(cartItem.item.price * cartItem.quantity).toFixed(2)}
                             </span>
                           </div>
                         </div>
@@ -187,14 +187,14 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQty, on
                         <Leaf className="w-3.5 h-3.5 text-secondary shrink-0 animate-bounce" />
                         <div>
                           <p className="font-bold text-secondary">Pickup ETA: {estimatedPreparationTime}</p>
-                          <p>Collection Address: 12 Montpelier Parade, Harrogate</p>
+                          <p>Collection Address: 12 Montpelier Parade, Dubai</p>
                         </div>
                       </div>
 
                       <div className="space-y-1">
                         <div className="flex justify-between text-xs text-on-surface-variant">
                           <span>Today's Subtotal</span>
-                          <span>£{cartSubtotal.toFixed(2)}</span>
+                          <span>AED {cartSubtotal.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between text-xs text-on-surface-variant">
                           <span>VAT (Tax Included)</span>
@@ -202,7 +202,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQty, on
                         </div>
                         <div className="flex justify-between text-sm font-black text-primary pt-2 border-t border-outline-variant/20">
                           <span>Total Amount</span>
-                          <span className="font-serif text-lg">£{cartSubtotal.toFixed(2)}</span>
+                          <span className="font-serif text-lg">AED {cartSubtotal.toFixed(2)}</span>
                         </div>
                       </div>
 

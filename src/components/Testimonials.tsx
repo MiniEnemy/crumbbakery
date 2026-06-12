@@ -132,7 +132,7 @@ export default function Testimonials() {
                 value={author}
                 required
                 onChange={(e) => setAuthor(e.target.value)}
-                placeholder="Sarah J. from Harrogate"
+                placeholder="Sarah J. from Dubai"
                 className="w-full bg-[#fff8f5] border border-outline-variant rounded-xl p-3 focus:outline-none focus:border-primary text-xs font-sans"
               />
             </div>

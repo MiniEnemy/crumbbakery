@@ -1,6 +1,6 @@
 # Crumb & Co. Bakery
 
-Harrogate's favourite little independent bakery. Fresh sourdough, zesty lemon drizzle cakes, pillowy cinnamon buns, and custom artisan celebration cakes baked fresh every morning.
+Dubai's favourite little independent bakery. Fresh sourdough, zesty lemon drizzle cakes, pillowy cinnamon buns, and custom artisan celebration cakes baked fresh every morning.
 
 ## Run Locally
 

@@ -9,7 +9,7 @@ export default function LocationHours() {
       try {
         const now = new Date();
         const formatter = new Intl.DateTimeFormat('en-US', {
-          timeZone: 'Europe/London',
+          timeZone: 'Asia/Dubai',
           hour: 'numeric',
           minute: 'numeric',
           hour12: false,
@@ -19,29 +19,28 @@ export default function LocationHours() {
         const parts = formatter.formatToParts(now);
         const partMap = Object.fromEntries(parts.map(p => [p.type, p.value]));
         
-        const day = partMap.weekday; // e.g. "Tuesday"
+        const day = partMap.weekday;
         const hour = parseInt(partMap.hour, 10);
         const minute = parseInt(partMap.minute, 10);
         const timeVal = hour * 60 + minute;
 
-        if (day === 'Sunday' || day === 'Monday') {
+        if (day === 'Friday') {
           setStatus({ open: false, text: 'Closed today. Resting the sourdough ovens!' });
           return;
         }
 
-        if (day === 'Saturday') {
-          // 09:00 - 15:00
-          if (timeVal >= 540 && timeVal < 900) {
-            setStatus({ open: true, text: `Open Now! Grab a Chelsea Cinnamon Bun (Closes 3 PM UK time)` });
+        if (day === 'Saturday' || day === 'Sunday') {
+          if (timeVal >= 540 && timeVal < 960) {
+            setStatus({ open: true, text: `Open Now! Grab a Chelsea Cinnamon Bun (Closes 4 PM Dubai time)` });
           } else {
-            setStatus({ open: false, text: `Closed. See you Saturday morning 09:00!` });
+            setStatus({ open: false, text: `Closed. See you Saturday/Sunday morning 09:00!` });
           }
           return;
         }
 
-        // Tue - Fri (08:00 - 16:00)
-        if (timeVal >= 480 && timeVal < 960) {
-          setStatus({ open: true, text: `Open Now! Warm sourdough rests on-deck (Closes 4 PM UK time)` });
+        // Mon - Thu (08:00 - 18:00)
+        if (timeVal >= 480 && timeVal < 1080) {
+          setStatus({ open: true, text: `Open Now! Warm sourdough rests on-deck (Closes 6 PM Dubai time)` });
         } else {
           setStatus({ open: false, text: `Closed now. Fresh loaves emerge tomorrow 08:00.` });
         }
@@ -68,7 +67,7 @@ export default function LocationHours() {
             </h2>
             <p className="font-sans text-on-surface-variant font-medium flex items-center gap-2">
               <MapPin className="w-5 h-5 text-primary shrink-0 animate-bounce" />
-              12 Montpelier Parade, Harrogate HG1 2TJ
+              12 Montpelier Parade, Dubai, United Arab Emirates
             </p>
           </div>
 
@@ -98,15 +97,15 @@ export default function LocationHours() {
 
             <div className="space-y-2.5 text-sm font-sans pt-2">
               <div className="flex justify-between border-b border-outline-variant/30 pb-2">
-                <span className="font-semibold text-on-surface-variant">Tuesday - Friday</span>
-                <span className="font-bold text-primary">08:00 - 16:00</span>
+                <span className="font-semibold text-on-surface-variant">Monday - Thursday</span>
+                <span className="font-bold text-primary">08:00 - 18:00</span>
               </div>
               <div className="flex justify-between border-b border-outline-variant/30 pb-2">
-                <span className="font-semibold text-on-surface-variant">Saturday morning</span>
-                <span className="font-bold text-primary">09:00 - 15:00</span>
+                <span className="font-semibold text-on-surface-variant">Saturday - Sunday</span>
+                <span className="font-bold text-primary">09:00 - 16:00</span>
               </div>
               <div className="flex justify-between text-on-surface-variant/70 italic">
-                <span>Sunday - Monday</span>
+                <span>Friday</span>
                 <span className="text-error font-medium">Closed for rest</span>
               </div>
             </div>
@@ -118,8 +117,8 @@ export default function LocationHours() {
               <Phone className="w-5 h-5" />
             </div>
             <div>
-              <p className="font-label-caps text-[10px] text-on-surface-variant">Phone &amp; Custom cake queries</p>
-              <p className="font-bold text-primary text-base">01423 555 888</p>
+              <p className="font-label-caps text-[10px] text-on-surface-variant">Phone &amp; WhatsApp</p>
+              <p className="font-bold text-primary text-base">+971 50 987 3608</p>
             </div>
           </div>
         </div>
@@ -128,7 +127,7 @@ export default function LocationHours() {
         <div className="w-full lg:w-1/2 h-80 lg:h-auto min-h-[340px] relative">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOcPqcp9_rBX8yt8XXyClFqMN-7OJQxIzdZlGAfjLE9fkgA2a4JMOIAmLxagFnDW1EYRCx8lOnaeF_slbI6dh8152V_z0rjYHVbVbD5MhGJbQw6DKGMAwK2x8R2nAPCuer53Sf85jCjKG1sh1NVof82Otx5krcGfgQCcp3C4nx9jnNMF4_r2T3ljMb_Gt2O8V2HUiRzzm6XAWwKew3y0pEOBPAPoG0kkCByW0pboR7z7QMckUMWWUVOt_hyq6QX6pyI5M2pJcmCuA"
-            alt="Harrogate Shop Location Map"
+            alt="Dubai Shop Location Map"
             className="w-full h-full object-cover select-none"
             referrerPolicy="no-referrer"
           />
@@ -136,7 +135,7 @@ export default function LocationHours() {
           <div className="absolute inset-0 bg-[#7d5545] mix-blend-color opacity-25" />
           <div className="absolute bottom-6 left-6 bg-[#fff8f5] p-3 rounded-lg border border-[#3D2B1F] shadow-md flex items-center gap-2 text-xs">
             <span className="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
-            <span className="font-bold text-primary">Montpelier Parade, Harrogate</span>
+            <span className="font-bold text-primary">Montpelier Parade, Dubai</span>
           </div>
         </div>
 

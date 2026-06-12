@@ -147,7 +147,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-serif font-extrabold text-4xl sm:text-5xl md:text-6xl text-primary max-w-4xl mx-auto mb-6 tracking-tight leading-tight"
         >
-          Harrogate's Favourite Little Craft Bakery
+          Dubai's Favourite Little Craft Bakery
         </motion.h1>
 
         {/* Brand Copy */}
@@ -157,7 +157,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           transition={{ duration: 1, delay: 0.3 }}
           className="font-sans text-lg md:text-xl text-on-surface-variant max-w-xl mx-auto mb-10 leading-relaxed font-medium"
         >
-          Hand-kneaded organic sourdoughs, zesty morning buns, and custom buttercream creation cakes baked fresh in Yorkshire since dawn. 
+          Hand-kneaded organic sourdoughs, zesty morning buns, and custom buttercream creation cakes baked fresh in Dubai every morning.
         </motion.p>
 
         {/* Primary Call-to-actions */}
@@ -192,7 +192,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           </div>
           <div className="flex items-center gap-2 border-l border-outline-variant/60 pl-6 hidden sm:flex">
             <span className="w-2 h-2 rounded-full bg-primary-container"></span>
-            Heritage Yorkshire Flour
+            Heritage Organic Flour
           </div>
           <div className="flex items-center gap-2 border-l border-outline-variant/60 pl-6">
             <span className="w-2 h-2 rounded-full bg-secondary"></span>

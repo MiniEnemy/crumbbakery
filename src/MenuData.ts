@@ -37,7 +37,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: 'sourdough-country',
     name: 'Sourdough Country Loaf',
-    description: 'Slow-fermented for 36 hours. Open crumb, crisp blisters, and a classic robust Yorkshire sour flavor.',
+    description: 'Slow-fermented for 36 hours. Open crumb, crisp blisters, and a classic robust artisan sour flavor.',
     price: 4.20,
     category: 'loaves',
     tags: ['Vegan', 'Slow Ferment', 'Local Grains'],
@@ -55,9 +55,9 @@ export const MENU_ITEMS: MenuItem[] = [
     altText: 'Rustic loaf surrounded by fresh rosemary stalks.'
   },
   {
-    id: 'yorkshire-tea-loaf',
-    name: 'Yorkshire Tea Loaf',
-    description: 'Heritage bakery cake loaded with dried sultanas and raisins, pre-soaked overnight in strong Yorkshire gold tea.',
+    id: 'heritage-tea-loaf',
+    name: 'Heritage Tea Loaf',
+    description: 'Heritage bakery cake loaded with dried sultanas and raisins, pre-soaked overnight in strong premium gold tea.',
     price: 3.80,
     category: 'loaves',
     tags: ['Nostalgic', 'Perfect with Tea'],
@@ -119,8 +119,8 @@ export const MENU_ITEMS: MenuItem[] = [
 export const INITIAL_REVIEWS = [
   {
     id: 'rev-1',
-    author: 'Sarah J. (Harrogate)',
-    text: 'The best scones and pastries in all of Yorkshire. I drive 20 miles every Saturday just for their cinnamon bun special!',
+    author: 'Sarah J. (Dubai)',
+    text: 'The best scones and pastries in all of Dubai! I drive across town every Saturday just for their cinnamon bun special!',
     rating: 5,
     date: '3 days ago'
   },

@@ -167,7 +167,7 @@ export default function CakeCustomizer({ onAddToBag }: CakeCustomizerProps) {
                     </div>
                     {item.add > 0 && (
                       <span className="text-[10px] text-secondary font-black mt-3">
-                        +£{item.add.toFixed(2)}
+                        +AED {item.add.toFixed(2)}
                       </span>
                     )}
                   </button>
@@ -203,7 +203,7 @@ export default function CakeCustomizer({ onAddToBag }: CakeCustomizerProps) {
                 4. Adjust Recipe Requirements (Optional)
               </h4>
               <p className="text-[11px] text-on-surface-variant">
-                We safely substitute classic ingredients using sterile containers. Surcharge of +£2.50 per replacement applies.
+                We safely substitute classic ingredients using sterile containers. Surcharge of +AED 2.50 per replacement applies.
               </p>
               <div className="flex flex-wrap gap-2 pt-1 animate-pulse">
                 {diets.map((diet) => {
@@ -311,18 +311,18 @@ export default function CakeCustomizer({ onAddToBag }: CakeCustomizerProps) {
               {/* Hand-drawn check details */}
               <div className="border-b border-dashed border-[#3D2B1F]/40 pb-4 text-center">
                 <p className="font-serif font-black text-lg text-primary">Crumb &amp; Co. Bake Note</p>
-                <p className="text-[10px] text-on-surface-variant italic mt-0.5">Harrogate, North Yorkshire</p>
+                <p className="text-[10px] text-on-surface-variant italic mt-0.5">Dubai, United Arab Emirates</p>
               </div>
 
               <div className="space-y-2 border-b border-dashed border-[#3D2B1F]/40 pb-4">
                 <div className="flex justify-between">
                   <span>Size: {size.split(' ')[0]} Layer</span>
-                  <span className="font-bold">£25.00</span>
+                  <span className="font-bold">AED 25.00</span>
                 </div>
                 {currentSizeDetails.add > 0 && (
                   <div className="flex justify-between text-on-surface-variant">
                     <span>.. Size Surcharge</span>
-                    <span>+£{currentSizeDetails.add.toFixed(2)}</span>
+                    <span>+AED {currentSizeDetails.add.toFixed(2)}</span>
                   </div>
                 )}
                 <div className="flex justify-between">
@@ -337,7 +337,7 @@ export default function CakeCustomizer({ onAddToBag }: CakeCustomizerProps) {
                 {requirements.map((req) => (
                   <div key={req} className="flex justify-between text-[#83746f]">
                     <span>.. Sub: {req.split(' ')[0]}</span>
-                    <span>+£2.50</span>
+                    <span>+AED 2.50</span>
                   </div>
                 ))}
               </div>
@@ -359,7 +359,7 @@ export default function CakeCustomizer({ onAddToBag }: CakeCustomizerProps) {
               <div className="flex items-center justify-between pt-4 border-t border-[#3D2B1F]/60">
                 <span className="font-bold text-sm">Estimated Total:</span>
                 <span className="font-serif text-2xl font-black text-[#7d5545]">
-                  £{calculatedPrice.toFixed(2)}
+                  AED {calculatedPrice.toFixed(2)}
                 </span>
               </div>
 
