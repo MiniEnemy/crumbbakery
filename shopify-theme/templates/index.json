@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "header": {
+      "type": "header"
+    },
+    "hero": {
+      "type": "hero"
+    },
+    "menu-section": {
+      "type": "menu-section"
+    },
+    "cake-customizer": {
+      "type": "cake-customizer"
+    },
+    "about-timeline": {
+      "type": "about-timeline"
+    },
+    "testimonials": {
+      "type": "testimonials"
+    },
+    "location-hours": {
+      "type": "location-hours"
+    },
+    "footer": {
+      "type": "footer"
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "menu-section",
+    "cake-customizer",
+    "about-timeline",
+    "testimonials",
+    "location-hours",
+    "footer"
+  ]
+}

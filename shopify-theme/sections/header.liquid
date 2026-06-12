@@ -1,0 +1,77 @@
+<header class="site-header" id="site-header">
+  <nav class="site-header__nav container-bakery">
+    <a href="/" class="site-header__logo">
+      <div class="site-header__logo-icon">C</div>
+      <span class="site-header__logo-text font-serif font-extrabold">{{ section.settings.logo_text }}</span>
+    </a>
+
+    <div class="site-header__links">
+      <a href="#bakes" class="site-header__link">Our Favourites</a>
+      <a href="#menu" class="site-header__link">Interactive Menu</a>
+      <a href="#about" class="site-header__link">Ellie &amp; Rosie</a>
+      <a href="#orders" class="site-header__link">Cake Customizer</a>
+      <a href="#find-us" class="site-header__link">Find Us</a>
+    </div>
+
+    <div class="site-header__actions">
+      <button class="site-header__cart-btn" data-cart-open aria-label="Open cart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-count-badge" style="display:none">0</span>
+      </button>
+      <a href="#orders" class="site-header__custom-cake-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 12 20 22 4 22 4 12"/>
+          <rect x="2" y="7" width="20" height="5"/>
+          <line x1="12" y1="22" x2="12" y2="7"/>
+          <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/>
+          <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
+        </svg>
+        Custom Cake
+      </a>
+      <button class="site-header__mobile-toggle" aria-label="Menu">
+        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg class="icon-close" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav__inner">
+      <a href="#bakes" class="mobile-nav__link">Our Favourites</a>
+      <a href="#menu" class="mobile-nav__link">Interactive Menu</a>
+      <a href="#about" class="mobile-nav__link">Ellie &amp; Rosie</a>
+      <a href="#orders" class="mobile-nav__link">Cake Customizer</a>
+      <a href="#find-us" class="mobile-nav__link">Find Us</a>
+      <a href="#orders" class="mobile-nav__cta">
+        <span class="animate-pulse-dot"></span>
+        Custom Cake Builder
+      </a>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "tag": "header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo text",
+      "default": "Crumb & Co."
+    }
+  ]
+}
+{% endschema %}

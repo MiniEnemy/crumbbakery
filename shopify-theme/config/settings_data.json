@@ -1,0 +1,88 @@
+{
+  "current": {
+    "colors": {
+      "color_primary": "#7d5545",
+      "color_secondary": "#44664b",
+      "color_background": "#fff8f5",
+      "color_surface": "#fff8f5",
+      "color_text": "#2c1810",
+      "color_text_light": "#6b5a50",
+      "color_accent": "#c4956a",
+      "color_border": "#e8ddd4",
+      "color_button_primary_bg": "#7d5545",
+      "color_button_primary_text": "#ffffff",
+      "color_button_secondary_bg": "#44664b",
+      "color_button_secondary_text": "#ffffff"
+    },
+    "typography": {
+      "font_heading": "playfair_display_n7",
+      "font_body": "dm_sans_n4",
+      "font_accent": "dancing_script_n4",
+      "font_heading_scale": 100,
+      "font_body_scale": 100
+    },
+    "social_media": {
+      "social_instagram_link": "https://instagram.com/crumbandco",
+      "social_facebook_link": "",
+      "social_tiktok_link": "",
+      "social_twitter_link": ""
+    },
+    "contact_information": {
+      "contact_phone": "+971509873608",
+      "contact_whatsapp": "+971509873608",
+      "contact_email": "hello@crumbandco.me",
+      "contact_address": "12 Montpelier Parade, Dubai, United Arab Emirates",
+      "contact_map_url": ""
+    },
+    "business_hours": {
+      "hours_weekday": "8:00 AM - 10:00 PM",
+      "hours_weekend": "9:00 AM - 11:00 PM",
+      "hours_friday": "2:00 PM - 11:00 PM"
+    },
+    "cart": {
+      "enable_cart_drawer": true
+    }
+  },
+  "presets": {
+    "default": {
+      "colors": {
+        "color_primary": "#7d5545",
+        "color_secondary": "#44664b",
+        "color_background": "#fff8f5",
+        "color_surface": "#fff8f5",
+        "color_text": "#2c1810",
+        "color_text_light": "#6b5a50",
+        "color_accent": "#c4956a",
+        "color_border": "#e8ddd4",
+        "color_button_primary_bg": "#7d5545",
+        "color_button_primary_text": "#ffffff",
+        "color_button_secondary_bg": "#44664b",
+        "color_button_secondary_text": "#ffffff"
+      },
+      "typography": {
+        "font_heading": "playfair_display_n7",
+        "font_body": "dm_sans_n4",
+        "font_accent": "dancing_script_n4",
+        "font_heading_scale": 100,
+        "font_body_scale": 100
+      },
+      "social_media": {
+        "social_instagram_link": "https://instagram.com/crumbandco"
+      },
+      "contact_information": {
+        "contact_phone": "+971509873608",
+        "contact_whatsapp": "+971509873608",
+        "contact_email": "hello@crumbandco.me",
+        "contact_address": "12 Montpelier Parade, Dubai, United Arab Emirates"
+      },
+      "business_hours": {
+        "hours_weekday": "8:00 AM - 10:00 PM",
+        "hours_weekend": "9:00 AM - 11:00 PM",
+        "hours_friday": "2:00 PM - 11:00 PM"
+      },
+      "cart": {
+        "enable_cart_drawer": true
+      }
+    }
+  }
+}

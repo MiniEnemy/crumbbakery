@@ -1,0 +1,224 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Crumb & Co.",
+    "theme_version": "1.0.0",
+    "theme_author": "Crumb & Co.",
+    "theme_documentation_url": "",
+    "theme_support_url": ""
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary Color",
+        "default": "#7d5545"
+      },
+      {
+        "type": "color",
+        "id": "color_secondary",
+        "label": "Secondary Color",
+        "default": "#44664b"
+      },
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Background Color",
+        "default": "#fff8f5"
+      },
+      {
+        "type": "color",
+        "id": "color_surface",
+        "label": "Surface Color",
+        "default": "#fff8f5"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text Color",
+        "default": "#2c1810"
+      },
+      {
+        "type": "color",
+        "id": "color_text_light",
+        "label": "Light Text Color",
+        "default": "#6b5a50"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Accent Color",
+        "default": "#c4956a"
+      },
+      {
+        "type": "color",
+        "id": "color_border",
+        "label": "Border Color",
+        "default": "#e8ddd4"
+      },
+      {
+        "type": "color",
+        "id": "color_button_primary_bg",
+        "label": "Button Primary Background",
+        "default": "#7d5545"
+      },
+      {
+        "type": "color",
+        "id": "color_button_primary_text",
+        "label": "Button Primary Text",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_button_secondary_bg",
+        "label": "Button Secondary Background",
+        "default": "#44664b"
+      },
+      {
+        "type": "color",
+        "id": "color_button_secondary_text",
+        "label": "Button Secondary Text",
+        "default": "#ffffff"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "label": "Heading Font",
+        "default": "playfair_display_n7"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "label": "Body Font",
+        "default": "dm_sans_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_accent",
+        "label": "Accent Font",
+        "default": "dancing_script_n4"
+      },
+      {
+        "type": "range",
+        "id": "font_heading_scale",
+        "label": "Heading Scale",
+        "min": 80,
+        "max": 150,
+        "step": 5,
+        "default": 100,
+        "unit": "%"
+      },
+      {
+        "type": "range",
+        "id": "font_body_scale",
+        "label": "Body Scale",
+        "min": 80,
+        "max": 150,
+        "step": 5,
+        "default": 100,
+        "unit": "%"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram URL",
+        "default": "https://instagram.com/crumbandco"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook URL"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok_link",
+        "label": "TikTok URL"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "X (Twitter) URL"
+      }
+    ]
+  },
+  {
+    "name": "Contact Information",
+    "settings": [
+      {
+        "type": "text",
+        "id": "contact_phone",
+        "label": "Phone Number",
+        "default": "+971509873608"
+      },
+      {
+        "type": "text",
+        "id": "contact_whatsapp",
+        "label": "WhatsApp Number",
+        "default": "+971509873608"
+      },
+      {
+        "type": "email",
+        "id": "contact_email",
+        "label": "Email Address",
+        "default": "hello@crumbandco.me"
+      },
+      {
+        "type": "textarea",
+        "id": "contact_address",
+        "label": "Store Address",
+        "default": "12 Montpelier Parade, Dubai, United Arab Emirates"
+      },
+      {
+        "type": "text",
+        "id": "contact_map_url",
+        "label": "Google Maps URL"
+      }
+    ]
+  },
+  {
+    "name": "Business Hours",
+    "settings": [
+      {
+        "type": "text",
+        "id": "hours_weekday",
+        "label": "Weekday Hours",
+        "default": "8:00 AM - 10:00 PM"
+      },
+      {
+        "type": "text",
+        "id": "hours_weekend",
+        "label": "Weekend Hours",
+        "default": "9:00 AM - 11:00 PM"
+      },
+      {
+        "type": "text",
+        "id": "hours_friday",
+        "label": "Friday Hours",
+        "default": "2:00 PM - 11:00 PM"
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_cart_drawer",
+        "label": "Enable Cart Drawer",
+        "default": true
+      }
+    ]
+  }
+]

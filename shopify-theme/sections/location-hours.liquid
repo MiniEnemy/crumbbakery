@@ -1,0 +1,86 @@
+<section class="location-section" id="find-us">
+  <div class="container-bakery">
+    <div class="location-card">
+      
+      <!-- Left: Details -->
+      <div class="location-details">
+        <div class="location-header">
+          <span class="section-accent font-accent">drop by!</span>
+          <h2 class="location-heading font-serif font-extrabold">Visit Ellie &amp; Rosie</h2>
+          <p class="location-address">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            {{ section.settings.address | default: "12 Montpelier Parade, Dubai, United Arab Emirates" }}
+          </p>
+        </div>
+        
+        <!-- Store hours -->
+        <div class="store-hours">
+          <div class="store-hours-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <h3 class="font-serif font-bold">Store Hours</h3>
+          </div>
+          
+          <!-- Live status -->
+          <div class="store-status" id="store-status">
+            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="status-text">
+              <p class="status-label">CHECKING STATUS...</p>
+              <p class="status-detail">Checking store hours...</p>
+            </div>
+          </div>
+          
+          <div class="hours-table">
+            <div class="hours-row">
+              <span class="hours-day">Monday - Thursday</span>
+              <span class="hours-time font-bold">08:00 - 18:00</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Saturday - Sunday</span>
+              <span class="hours-time font-bold">09:00 - 16:00</span>
+            </div>
+            <div class="hours-row hours-row--closed">
+              <span class="hours-day">Friday</span>
+              <span class="hours-time text-error">Closed for rest</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Phone -->
+        <div class="location-phone">
+          <div class="phone-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <p class="phone-label">Phone &amp; WhatsApp</p>
+            <p class="phone-number font-bold">{{ section.settings.phone | default: "+971 50 987 3608" }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right: Map -->
+      <div class="location-map">
+        <img src="{{ section.settings.map_image | default: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBOcPqcp9_rBX8yt8XXyClFqMN-7OJQxIzdZlGAfjLE9fkgA2a4JMOIAmLxagFnDW1EYRCx8lOnaeF_slbI6dh8152V_z0rjYHVbVbD5MhGJbQw6DKGMAwK2x8R2nAPCuer53Sf85jCjKG1sh1NVof82Otx5krcGfgQCcp3C4nx9jnNMF4_r2T3ljMb_Gt2O8V2HUiRzzm6XAWwKew3y0pEOBPAPoG0kkCByW0pboR7z7QMckUMWWUVOt_hyq6QX6pyI5M2pJcmCuA' }}" 
+             alt="Dubai Shop Location Map" class="map-image" referrerpolicy="no-referrer" />
+        <div class="map-overlay"></div>
+        <div class="map-badge">
+          <span class="map-ping"></span>
+          <span class="font-bold">Montpelier Parade, Dubai</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Location & Hours",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "address", "label": "Address", "default": "12 Montpelier Parade, Dubai, United Arab Emirates" },
+    { "type": "text", "id": "phone", "label": "Phone", "default": "+971 50 987 3608" },
+    { "type": "image_picker", "id": "map_image", "label": "Map Image" }
+  ],
+  "presets": [{ "name": "Location & Hours" }]
+}
+{% endschema %}

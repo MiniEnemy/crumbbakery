@@ -1,0 +1,101 @@
+<section class="about-section" id="about">
+  <div class="container-bakery about-grid">
+    
+    <!-- Left side: Story -->
+    <div class="about-story">
+      <div class="about-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/><path d="M3 12h9l2 -3"/><path d="M19.5 12.572l-7.5 7.428"/></svg>
+        <span class="font-label-caps">Family-run &middot; Organic &middot; Built with Love</span>
+      </div>
+      
+      <h2 class="about-heading font-serif font-extrabold">Meet Ellie &amp; Rosie</h2>
+      
+      <p class="about-text">
+        {{ section.settings.story_text | default: "Crumb & Co. was founded in Dubai on a simple principle: doing things slowly and properly. No pre-mixes, no synthetic additives, and no corner-cutting. We feed our sourdough starters daily and work closely with local farms to source berries, honey, and dairies." }}
+      </p>
+      
+      <div class="about-image-wrapper">
+        <div class="about-image-frame hand-drawn-border">
+          <img src="{{ section.settings.image | default: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAsWz_uTkgfNvjGSnX2C2KBCnLDiiCbxsq3LscPC0biuflzvaNGksafHa1JQZkv4AMy8KejsX4hc_RaNI0vvYS8tRuXNUmpPxtwDRwQ_0XqgKtxWgLG0AFvXy8BIwOrXlqPgZid4JoNsR_mPbTW3nKcLd-3Mrk_cZsosoA3_6mT0Wx8H8H4UX2fiMuq82OkgJ4UMLlq94mMoxu2Drla4QWjyWZ7P7z1oP3p62BVcwD9yFGRtXFBGWKcm8DWsyF5lf0NYgiyMaTRuiI' }}" 
+               alt="Ellie and Rosie behind the counter" class="about-image" referrerpolicy="no-referrer" />
+        </div>
+        <span class="about-image-caption font-accent">baking at 5am!</span>
+      </div>
+    </div>
+    
+    <!-- Right side: Milestones -->
+    <div class="about-milestones">
+      <div class="about-milestones-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        <h3 class="font-serif font-bold">Bakery Milestones</h3>
+      </div>
+      
+      <p class="about-milestones-desc">Click on our timeline markers below to follow our journey from a domestic kitchen oven to local culinary appreciation.</p>
+      
+      <!-- Year buttons -->
+      <div class="milestone-years">
+        {% for block in section.blocks %}
+          {% if block.type == 'milestone' %}
+            <button class="milestone-year {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+              <span class="milestone-dot"></span>
+              <span class="milestone-year-text font-serif font-black">{{ block.settings.year }}</span>
+            </button>
+          {% endif %}
+        {% endfor %}
+      </div>
+      
+      <!-- Milestone content -->
+      <div class="milestone-content" id="milestone-content">
+        {% for block in section.blocks %}
+          {% if block.type == 'milestone' %}
+            <div class="milestone-card {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+              <span class="milestone-badge">{{ block.settings.badge }}</span>
+              <h4 class="milestone-title font-serif font-extrabold">{{ block.settings.title }}</h4>
+              <p class="milestone-desc">{{ block.settings.description }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      
+      <button class="milestone-next" id="milestone-next">
+        See Next Milestone
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+    
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Timeline",
+  "tag": "section",
+  "settings": [
+    { "type": "textarea", "id": "story_text", "label": "Story Text", "default": "Crumb & Co. was founded in Dubai on a simple principle: doing things slowly and properly. No pre-mixes, no synthetic additives, and no corner-cutting. We feed our sourdough starters daily and work closely with local farms to source berries, honey, and dairies." },
+    { "type": "image_picker", "id": "image", "label": "About Image" }
+  ],
+  "blocks": [
+    {
+      "type": "milestone",
+      "name": "Milestone",
+      "settings": [
+        { "type": "text", "id": "year", "label": "Year" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "description", "label": "Description" },
+        { "type": "text", "id": "badge", "label": "Badge Text" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Timeline",
+      "blocks": [
+        { "type": "milestone", "settings": { "year": "2017", "title": "The First Sourdough Loaf", "description": "Ellie and Rosie baked the very first slow-ferment Country Boule in their mother's kitchen stove. Orders from close neighbors quickly outgrew the single pan capacity!", "badge": "humble beginnings" } },
+        { "type": "milestone", "settings": { "year": "2019", "title": "Moving to Montpelier Parade", "description": "With support from Dubai communities, we officially rented out the little traditional green storefront. We bought our pride and joy: a professional stone-deck bread oven from Sweden.", "badge": "retail storefront" } },
+        { "type": "milestone", "settings": { "year": "2021", "title": "Award-Winning Morning Pastry", "description": "Our Cinnamon Chelsea Bun was crowned Dubai's Favourite Pastry by the local culinary guild, causing queues to wind around the street corner every Saturday morning.", "badge": "gourmet award" } },
+        { "type": "milestone", "settings": { "year": "2024", "title": "Zero Waste & Solar Milling", "description": "Partnering solely with organic, regenerative wind-powered mills, we achieved a completely carbon-neutral baking process with zero single-use plastics in our takeaway cartons.", "badge": "modern ecology" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

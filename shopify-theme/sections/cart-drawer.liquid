@@ -1,0 +1,102 @@
+<div class="cart-drawer-overlay" data-cart-close></div>
+<div class="cart-drawer" id="cart-drawer">
+
+  <!-- Header -->
+  <div class="cart-drawer__header">
+    <div class="cart-drawer__title">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <path d="M16 10a4 4 0 01-8 0"></path>
+      </svg>
+      <span class="font-serif font-black">Your Bake Bag</span>
+    </div>
+    <button class="cart-drawer__close" data-cart-close aria-label="Close cart">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Items -->
+  <div class="cart-drawer__items" id="cart-drawer-items">
+    {%- if cart.item_count > 0 -%}
+      {%- for item in cart.items -%}
+        {%- render 'cart-item', item: item -%}
+      {%- endfor -%}
+    {%- else -%}
+      <div class="cart-empty-state">
+        <div class="cart-empty-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 01-8 0"></path>
+          </svg>
+        </div>
+        <p class="cart-empty-title font-sans font-semibold">Your Bake Bag is empty!</p>
+        <p class="cart-empty-desc">Explore today's zesty lemon drizzle cakes, pillowy cinnamon Chelsea buns, and add items to begin.</p>
+      </div>
+    {%- endif -%}
+  </div>
+
+  <!-- Footer / Summary -->
+  <div class="cart-drawer__footer" id="cart-drawer-footer">
+    <div class="cart-eta">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M17 8C8 10 5.9 16.17 3.82 21.34L3 23l2.66-.82C11.83 18.1 18 14 18 8a6 6 0 00-6-6 6 6 0 00-6 6"></path>
+        <path d="M17 8L22 3"></path>
+        <path d="M22 8L17 3"></path>
+        <path d="M12 22c-1.5 0-3-.5-4-1.5"></path>
+        <path d="M12 22c1.5 0 3-.5 4-1.5"></path>
+      </svg>
+      <div>
+        <p class="cart-eta-label">Pickup ETA: Ready for Collection in 15 Minutes!</p>
+        <p class="cart-eta-address">Collection Address: {{ section.settings.collection_address }}</p>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <div class="cart-summary-row">
+        <span>Today's Subtotal</span>
+        <span class="cart-subtotal">{{ cart.total_price | money_with_currency }}</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>VAT (Tax Included)</span>
+        <span>Standard Rate</span>
+      </div>
+      <div class="cart-summary-row cart-summary-total">
+        <span>Total Amount</span>
+        <span class="font-serif cart-subtotal-bold">{{ cart.total_price | money_with_currency }}</span>
+      </div>
+    </div>
+
+    <div class="cart-phone-field">
+      <label for="cart-phone">Your Mobile for SMS pickup alerts</label>
+      <input id="cart-phone" type="tel" placeholder="050 987 3608" required />
+    </div>
+
+    <button type="button" class="btn-primary btn-full" id="cart-checkout-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="8" r="7"></circle>
+        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+      </svg>
+      Submit Order for Pickup
+    </button>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart Drawer",
+  "tag": "aside",
+  "settings": [
+    {
+      "type": "text",
+      "id": "collection_address",
+      "label": "Collection Address",
+      "default": "12 Montpelier Parade, Dubai"
+    }
+  ]
+}
+{% endschema %}

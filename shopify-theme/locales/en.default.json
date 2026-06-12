@@ -1,0 +1,169 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content",
+      "close": "Close",
+      "link": "Link"
+    },
+    "404": {
+      "title": "Page Not Found",
+      "subtitle": "The page you're looking for doesn't exist.",
+      "button": "Back to Home"
+    }
+  },
+  "sections": {
+    "header": {
+      "title": "Navigation",
+      "cart": "Cart",
+      "menu": "Menu",
+      "search": "Search"
+    },
+    "footer": {
+      "title": "Footer",
+      "subscribe_heading": "Stay in the Loop",
+      "subscribe_text": "Get fresh updates on seasonal specials and exclusive offers.",
+      "email_placeholder": "Your email address",
+      "subscribe_button": "Subscribe",
+      "quick_links": "Quick Links",
+      "contact_us": "Contact Us",
+      "follow_us": "Follow Us",
+      "copyright": "All rights reserved."
+    },
+    "hero": {
+      "title": "Crumb & Co.",
+      "subtitle": "Artisan Bakery in Dubai",
+      "description": "Handcrafted cakes, pastries, and sweet treats made with love and the finest ingredients.",
+      "button_primary": "Explore Our Menu",
+      "button_secondary": "Custom Order"
+    },
+    "menu_section": {
+      "title": "Our Menu",
+      "subtitle": "Baked Fresh Daily",
+      "description": "From classic pastries to custom celebration cakes, every bite tells a story.",
+      "tab_all": "All",
+      "tab_cakes": "Cakes",
+      "tab_pastries": "Pastries",
+      "tab_breads": "Breads",
+      "tab_custom": "Custom Orders",
+      "add_to_cart": "Add to Cart",
+      "view_details": "View Details"
+    },
+    "cake_customizer": {
+      "title": "Design Your Dream Cake",
+      "subtitle": "Custom Cake Builder",
+      "description": "Create a personalized masterpiece for your special occasion.",
+      "step_flavor": "Choose Flavor",
+      "step_size": "Select Size",
+      "step_design": "Pick Design",
+      "step_message": "Add Message",
+      "step_review": "Review Order",
+      "flavor_chocolate": "Rich Chocolate",
+      "flavor_vanilla": "Madagascar Vanilla",
+      "flavor_redvelvet": "Red Velvet",
+      "flavor_lemon": "Lemon Zest",
+      "flavor_carrot": "Carrot Cake",
+      "flavor_caramel": "Salted Caramel",
+      "size_6": "6 inch (serves 8-10)",
+      "size_8": "8 inch (serves 14-18)",
+      "size_10": "10 inch (serves 22-28)",
+      "size_12": "12 inch (serves 35-45)",
+      "message_placeholder": "Happy Birthday, Sarah!",
+      "next_step": "Next Step",
+      "prev_step": "Previous",
+      "add_to_cart": "Add Custom Cake to Cart",
+      "price_from": "From"
+    },
+    "about_timeline": {
+      "title": "Our Story",
+      "subtitle": "A Journey of Passion",
+      "description": "From a small kitchen dream to Dubai's beloved artisan bakery.",
+      "timeline_item_1_year": "2018",
+      "timeline_item_1_title": "The Dream Begins",
+      "timeline_item_1_text": "Started baking from a home kitchen with a passion for creating joy through sweets.",
+      "timeline_item_2_year": "2020",
+      "timeline_item_2_title": "First Bakery Opens",
+      "timeline_item_2_text": "Opened our doors at Montpelier Parade, serving the Dubai community.",
+      "timeline_item_3_year": "2022",
+      "timeline_item_3_title": "Custom Cake Studio",
+      "timeline_item_3_text": "Launched our custom cake design studio for weddings and celebrations.",
+      "timeline_item_4_year": "2024",
+      "timeline_item_4_title": "Community Favorite",
+      "timeline_item_4_text": "Recognized as one of Dubai's top artisan bakeries.",
+      "cta_text": "Visit Us Today"
+    },
+    "testimonials": {
+      "title": "Sweet Words",
+      "subtitle": "What Our Customers Say",
+      "description": "Don't just take our word for it — hear from our happy customers.",
+      "testimonial_1_name": "Sarah M.",
+      "testimonial_1_text": "The most beautiful and delicious wedding cake! Our guests couldn't stop talking about it.",
+      "testimonial_1_location": "Dubai Marina",
+      "testimonial_2_name": "Ahmed K.",
+      "testimonial_2_text": "Best croissants in Dubai, hands down. The butter croissant is absolutely perfect.",
+      "testimonial_2_location": "Downtown Dubai",
+      "testimonial_3_name": "Priya R.",
+      "testimonial_3_text": "They made my daughter's birthday cake exactly as she imagined. True artists!",
+      "testimonial_3_location": "JBR",
+      "testimonial_4_name": "James L.",
+      "testimonial_4_text": "Fresh bread every morning and the most friendly staff. This is my go-to bakery.",
+      "testimonial_4_location": "Palm Jumeirah",
+      "testimonial_5_name": "Fatima A.",
+      "testimonial_5_text": "The custom cake service is incredible. They turned my vision into a masterpiece.",
+      "testimonial_5_location": "Jumeirah"
+    },
+    "location_hours": {
+      "title": "Find Us",
+      "subtitle": "Visit Crumb & Co.",
+      "description": "Come say hello and taste the difference.",
+      "address_label": "Address",
+      "phone_label": "Phone",
+      "email_label": "Email",
+      "hours_label": "Opening Hours",
+      "weekday_label": "Mon - Thu",
+      "weekend_label": "Sat - Sun",
+      "friday_label": "Friday",
+      "whatsapp_button": "Chat on WhatsApp",
+      "directions_button": "Get Directions",
+      "call_button": "Call Us"
+    },
+    "cart_drawer": {
+      "title": "Your Cart",
+      "empty": "Your cart is empty",
+      "subtotal": "Subtotal",
+      "checkout": "Checkout",
+      "continue_shopping": "Continue Shopping",
+      "taxes_shipping": "Taxes and shipping calculated at checkout",
+      "remove": "Remove",
+      "quantity": "Quantity"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Cart",
+      "sold_out": "Sold Out",
+      "unavailable": "Unavailable",
+      "price": "Price",
+      "compare_at_price": "Regular price",
+      "vendor": "Vendor",
+      "type": "Type"
+    },
+    "collection": {
+      "title": "Collection"
+    }
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is currently empty.",
+    "continue_browsing": "Continue Browsing",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "note": "Order special instructions",
+    "taxes_shipping_notice": "Taxes and shipping calculated at checkout."
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Search for cakes, pastries...",
+    "no_results": "No results found for",
+    "results_count": "Showing {{ count }} results"
+  }
+}

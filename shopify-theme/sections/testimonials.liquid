@@ -1,0 +1,106 @@
+<section class="testimonials-section">
+  <div class="container-bakery">
+    <div class="section-header">
+      <span class="section-accent font-accent">warm words</span>
+      <h2 class="section-title font-serif font-extrabold">Loved by Locals</h2>
+      <div class="section-divider"></div>
+    </div>
+    
+    <!-- Reviews grid -->
+    <div class="reviews-grid" id="reviews-grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'review' %}
+          <div class="testimonial-card" {{ block.shopify_attributes }}>
+            <span class="testimonial-quote">&ldquo;</span>
+            <div class="testimonial-content">
+              <div class="testimonial-stars">
+                {% for i in (1..5) %}
+                  {% if i <= block.settings.rating %}
+                    <svg class="star filled" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  {% else %}
+                    <svg class="star empty" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <p class="testimonial-text">{{ block.settings.text }}</p>
+            </div>
+            <div class="testimonial-footer">
+              <span class="testimonial-author font-accent">{{ block.settings.author }}</span>
+              <span class="testimonial-date">{{ block.settings.date }}</span>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
+    <!-- Review form -->
+    <div class="review-form-wrapper">
+      <div class="review-form-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/><path d="M3 12h9l2 -3"/><path d="M19.5 12.572l-7.5 7.428"/></svg>
+        <h3 class="font-serif font-black">Leave Ellie &amp; Rosie a Review</h3>
+      </div>
+      
+      <form class="review-form" id="review-form">
+        <!-- Star rating picker -->
+        <div class="review-rating">
+          <span class="review-rating-label">Your Rating:</span>
+          <div class="review-stars-picker" id="review-stars-picker">
+            {% for i in (1..5) %}
+              <button type="button" class="star-btn {% if i == 5 %}active{% endif %}" data-rating="{{ i }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </button>
+            {% endfor %}
+          </div>
+          <input type="hidden" id="review-rating-value" value="5" />
+        </div>
+        
+        <div class="review-form-field">
+          <label>Your Name / Town</label>
+          <input type="text" id="review-author" required placeholder="Sarah J. from Dubai" />
+        </div>
+        
+        <div class="review-form-field">
+          <label>Your Experience</label>
+          <textarea id="review-text" required rows="3" placeholder="The crumb was perfect, highly recommend..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary btn-full" id="review-submit-btn">Publish Testimonial</button>
+        
+        <div class="review-success" id="review-success" style="display:none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>Review published live below Ellie &amp; Rosie's Board! Thank you!</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        { "type": "text", "id": "author", "label": "Author" },
+        { "type": "textarea", "id": "text", "label": "Review Text" },
+        { "type": "range", "id": "rating", "label": "Rating", "min": 1, "max": 5, "step": 1, "default": 5 },
+        { "type": "text", "id": "date", "label": "Date" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        { "type": "review", "settings": { "author": "Sarah J. (Dubai)", "text": "The best scones and pastries in all of Dubai! I drive across town every Saturday just for their cinnamon bun special!", "rating": 5, "date": "3 days ago" } },
+        { "type": "review", "settings": { "author": "Mark & Emily (Wedded Couple)", "text": "Crumb & Co. made our wedding cake and it was stunning. Minimalist design, beautifully layered organic strawberry sponge, and tasted absolutely divine.", "rating": 5, "date": "1 week ago" } },
+        { "type": "review", "settings": { "author": "David L. (Local Food Critic)", "text": "Their lemon drizzle loaf is completely unrivaled — magically moist. Ellie and Rosie maintain a majestic standard of flour craft here.", "rating": 5, "date": "2 weeks ago" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

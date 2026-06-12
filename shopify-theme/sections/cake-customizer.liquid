@@ -1,0 +1,178 @@
+<section class="customizer-section" id="orders">
+  <div class="container-bakery">
+    <div class="section-header">
+      <span class="section-accent font-accent">bespoke craft</span>
+      <h2 class="section-title font-serif font-extrabold">Design Your Celebration Cake</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Select your recipe elements below and we will prepare a bespoke recipe estimation card with custom pricing.</p>
+    </div>
+    
+    <div class="customizer-grid">
+      <!-- Form side -->
+      <form class="customizer-form" id="cake-form">
+        
+        <!-- Step 1: Flavour -->
+        <div class="customizer-step">
+          <h3 class="customizer-step__title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg>
+            1. Choose Cake Flavour Base
+          </h3>
+          <div class="flavour-grid">
+            {% for block in section.blocks %}
+              {% if block.type == 'flavour' %}
+                <button type="button" class="flavour-option" data-flavour="{{ block.settings.name }}" data-color="{{ block.settings.color }}" data-highlight="{{ block.settings.highlight }}" {{ block.shopify_attributes }}>
+                  <span class="flavour-swatch" style="background-color: {{ block.settings.color }}"></span>
+                  <div>
+                    <p class="flavour-name">{{ block.settings.name }}</p>
+                    <p class="flavour-highlight">{{ block.settings.highlight }}</p>
+                  </div>
+                </button>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        
+        <!-- Step 2: Size -->
+        <div class="customizer-step">
+          <h3 class="customizer-step__title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            2. Select Layer Size
+          </h3>
+          <div class="size-grid">
+            <button type="button" class="size-option active" data-size='6" Small (Serves 6-8)' data-add="0">
+              <p class="size-name">6" Small (Serves 6-8)</p>
+              <p class="size-desc">Compact, cozy and perfect for intimate gatherings.</p>
+            </button>
+            <button type="button" class="size-option" data-size='8" Medium (Serves 10-12)' data-add="10">
+              <p class="size-name">8" Medium (Serves 10-12)</p>
+              <p class="size-desc">Our most popular size, ideal for family parties.</p>
+              <span class="size-surcharge">+AED 10.00</span>
+            </button>
+            <button type="button" class="size-option" data-size='10" Large (Serves 16-20)' data-add="20">
+              <p class="size-name">10" Large (Serves 16-20)</p>
+              <p class="size-desc">Expansive two-tier for grand celebrations.</p>
+              <span class="size-surcharge">+AED 20.00</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Step 3: Frosting -->
+        <div class="customizer-step">
+          <h4 class="customizer-step__subtitle">3. Buttercream &amp; Frosting Finish</h4>
+          <div class="frosting-options">
+            <button type="button" class="frosting-pill active" data-frosting="Rustic Semi-Naked">Rustic Semi-Naked</button>
+            <button type="button" class="frosting-pill" data-frosting="Creamy Soft Swirls">Creamy Soft Swirls</button>
+            <button type="button" class="frosting-pill" data-frosting="Classic Smooth Fondant">Classic Smooth Fondant</button>
+            <button type="button" class="frosting-pill" data-frosting="Woven Buttercream Buds">Woven Buttercream Buds</button>
+          </div>
+        </div>
+        
+        <!-- Step 4: Dietary -->
+        <div class="customizer-step">
+          <h4 class="customizer-step__subtitle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+            4. Adjust Recipe Requirements (Optional)
+          </h4>
+          <p class="customizer-note">We safely substitute classic ingredients using sterile containers. Surcharge of +AED 2.50 per replacement applies.</p>
+          <div class="diet-options">
+            <button type="button" class="diet-pill" data-diet="Gluten-Free Flour">
+              <span class="diet-check"></span>Gluten-Free Flour
+            </button>
+            <button type="button" class="diet-pill" data-diet="Dairy-Free Butter">
+              <span class="diet-check"></span>Dairy-Free Butter
+            </button>
+            <button type="button" class="diet-pill" data-diet="Nut-Free Recipe">
+              <span class="diet-check"></span>Nut-Free Recipe
+            </button>
+          </div>
+        </div>
+        
+        <!-- Step 5: Inscription -->
+        <div class="customizer-step">
+          <h4 class="customizer-step__subtitle">5. Hand-Drawn Inscription Greeting</h4>
+          <input type="text" id="inscription" maxlength="45" placeholder="e.g. Happy 30th Birthday Thomas!" class="inscription-input" />
+          <p class="char-count"><span id="char-count">0</span>/45 characters maximum</p>
+        </div>
+      </form>
+      
+      <!-- Receipt side -->
+      <div class="customizer-sidebar">
+        <!-- Cake preview -->
+        <div class="cake-preview" id="cake-preview">
+          <div class="cake-preview__sparkle">&#10024;</div>
+          <div class="cake-preview__body">
+            <div class="cake-layer cake-layer--top" id="cake-top">
+              <span class="cake-frosting-text" id="cake-frosting-text">Rustic Semi-Naked</span>
+            </div>
+            <div class="cake-layer cake-layer--base" id="cake-base"></div>
+            <div class="cake-candle">&#x1F56F;&#xFE0F;</div>
+          </div>
+          <div class="cake-preview__inscription" id="cake-inscription">"Your Inscription Here"</div>
+          <p class="cake-preview__label">Virtual Cake Blueprint</p>
+        </div>
+        
+        <!-- Receipt -->
+        <div class="cake-receipt" id="cake-receipt">
+          <div class="cake-receipt__header">
+            <p class="font-serif font-black">Crumb &amp; Co. Bake Note</p>
+            <p class="cake-receipt__location">Dubai, United Arab Emirates</p>
+          </div>
+          <div class="cake-receipt__line-items">
+            <div class="receipt-line">
+              <span>Size: 6" Layer</span>
+              <span class="font-bold">AED 25.00</span>
+            </div>
+          </div>
+          <div class="cake-receipt__ingredients">
+            <p class="receipt-ingredients-title">Gourmet Core Ingredients:</p>
+            <div class="ingredients-grid" id="ingredients-grid">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+          <div class="cake-receipt__total">
+            <span class="font-bold">Estimated Total:</span>
+            <span class="font-serif font-black" id="cake-total">AED 25.00</span>
+          </div>
+          <button type="button" class="btn-primary btn-full" id="cake-submit-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            Secure Customize Order
+          </button>
+          <p class="cake-receipt__disclaimer">Estimate includes free local collection from Montpelier Parade. Cancellations made 48 hours prior to selected bake date are fully refunded.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cake Customizer",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Design Your Celebration Cake" }
+  ],
+  "blocks": [
+    {
+      "type": "flavour",
+      "name": "Cake Flavour",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Flavour Name" },
+        { "type": "color", "id": "color", "label": "Preview Color", "default": "#FFF2B2" },
+        { "type": "text", "id": "highlight", "label": "Highlight Description" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cake Customizer",
+      "blocks": [
+        { "type": "flavour", "settings": { "name": "Lemon Sicilian Drizzle", "color": "#FFF2B2", "highlight": "Fresh Amalfi organic lemon juice and candied rind" } },
+        { "type": "flavour", "settings": { "name": "Rich Chocolate Fudge Drip", "color": "#4E3629", "highlight": "Decadent 70% dark Belgian cocoa and chocolate ganache" } },
+        { "type": "flavour", "settings": { "name": "Vanilla Bean & Rose Jam", "color": "#FFF8F4", "highlight": "Wild English roses macerated with real vanilla bean pods" } },
+        { "type": "flavour", "settings": { "name": "Vegan Raspberry Dream", "color": "#F7A3B7", "highlight": "Moist oat milk plant sponge packed with hand-picked raspberries" } },
+        { "type": "flavour", "settings": { "name": "Salted Caramel Buttercream", "color": "#D4A373", "highlight": "Rich caramel sauce cooked with Cornish sea salt flakes" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
