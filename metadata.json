@@ -1,0 +1,6 @@
+{
+  "name": "Crumb & Co.",
+  "description": "Harrogate's favourite little independent bakery. Fresh sourdough, zesty lemon drizzle cakes, pillowy cinnamon buns, and custom artisan celebration cakes baked fresh every morning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
