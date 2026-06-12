@@ -1,20 +1,23 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Crumb & Co. Bakery
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/fe302031-1fbc-4c2e-a681-b4d8e51a0b1f
+Harrogate's favourite little independent bakery. Fresh sourdough, zesty lemon drizzle cakes, pillowy cinnamon buns, and custom artisan celebration cakes baked fresh every morning.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev
+```
 
+App runs at **http://localhost:3000**
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Deploy
+
+Push to GitHub and connect to Vercel/Netlify/Cloudflare Pages. The build output is in `dist/`.
